@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <!-- SEO básico -->
+  <title>tartarugas marinhas — tartarugas marinhas</title>
+  <meta name="description" content="[[RESUMO_CURTO]]" />
+
+  <!-- Bibliotecas -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.8.0/dist/tf.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header role="banner">
+    <div class="wrap">
+      <nav aria-label="Navegação principal">
+        <div class="brand" aria-label="Marca da página">
+          <span aria-hidden="true"></span>
+          <strong>Mar Profundo</strong>
+        </div>
+
+        <div class="nav-links" role="navigation">
+          <a href="#curiosidades">Curiosidades</a>
+          <a href="#fatos">Fatos</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+        <div class="controls">
+          <button id="toggleTheme" class="btn ghost" aria-pressed="false" aria-label="Alternar modo claro e escuro">🌙</button>
+          <button id="btnAbrirChatbot" class="btn" aria-label="Abrir chatbot">Abrir Chatbot</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="wrap" role="main">
+    <!-- HERO -->
+    <section class="hero fade-in" aria-labelledby="titulo-hero">
+      <div>
+        <!-- TODO: Substituir o TEMA_DO_PROJETO -->
+        <h1 id="titulo-hero">Vida Marinha nos Ecossistemas Abissais</h1>
+        <!-- TODO: Substituir o SLOGAN_IMPACTANTE -->
+        <h2>Descubra o mistério das profundezas onde a vida desafia a escuridão.</h2>
+        <!-- TODO: Substituir o RESUMO_CURTO -->
+        <p>Nosso site explora a fascinante vida marinha que habita os ecossistemas abissais — as regiões mais profundas e desconhecidas do oceano. Aqui você vai conhecer criaturas incríveis, adaptações extremas e a importância desses ambientes para o equilíbrio do planeta.</p>
+
+        <div class="actions" role="group" aria-label="Ações principais">
+          <!-- Botão obrigatório: Reconhecimento Facial -->
+          <button id="abrirIA" class="btn" aria-label="Iniciar reconhecimento facial">
+            Reconhecimento Facial
+          </button>
+
+          <!-- Botão obrigatório: Abrir Chatbot (também no topo) -->
+          <button id="btnAbrirChatbotHero" class="btn ghost" aria-label="Abrir chatbot">
+            Abrir Chatbot
+          </button>
+        </div>
+      </div>
+      <div class="imgwrap" aria-hidden="false">
+        <!-- TODO: Substituir a URL_IMAGEM_HERO -->
+        <img src="https://ichef.bbci.co.uk/ace/ws/640/amz/worldservice/live/assets/images/2014/01/29/140129104456_15.-ponyfish-model_df.3821.jpg.webp?authuser=0" alt="Imagem hero relacionada a [[TEMA_DO_PROJETO]]" />
+      </div>
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section id="curiosidades" aria-labelledby="titulo-curiosidades" class="fade-in">
+      <header>
+        <h2 id="titulo-curiosidades">Curiosidades</h2>
+        <p>Descobertas rápidas sobre o tema do fundo do mar.</p>
+      </header>
+      <ul class="facts-list" role="list">
+        <!-- TODO: Preencher de 3 a 5 curiosidades -->
+        <li><div class="text">A luz do Sol nunca chega às zonas abissais — é um ambiente de escuridão total.</div></li>
+        <li><div class="text">A pressão da água pode ser mil vezes maior do que ao nível do mar.</div></li>
+        <li><div class="text">Muitas espécies produzem sua própria luz através da bioluminescência.</div></li>
+        <li><div class="text">Há organismos que sobrevivem sem oxigênio e sem luz, alimentando-se de compostos químicos vindos do fundo do mar.</div></li>
+        <li><div class="text">Menos de 5% do oceano abissal foi explorado pelo ser humano.</div></li>
+      </ul>
+    </section>
+
+    <!-- FATOS/CIÊNCIA -->
+    <section id="fatos" aria-labelledby="titulo-fatos" class="fade-in">
+      <header>
+        <h2 id="titulo-fatos">Fatos e Ciência</h2>
+        <p>Três pontos científicos para entender melhor.</p>
+      </header>
+      <div class="cards" role="list">
+        <!-- TODO: Preencher os cards com fatos -->
+        <article class="card" aria-label="Fato científico 1" role="listitem">
+          <h3>Luz na Escuridão</h3>
+          <p>A bioluminescência é comum — cerca de 90% dos organismos das profundezas produzem luz própria para atrair presas, se comunicar ou se camuflar.</p>
+        </article>
+
+        <article class="card" aria-label="Fato científico 2" role="listitem">
+          <h3>Adaptações Extremas</h3>
+          <p>As espécies abissais têm corpos flexíveis, mandíbulas enormes e estômagos elásticos para sobreviver à pressão e falta de alimento.</p>
+        </article>
+
+        <article class="card" aria-label="Fato científico 3" role="listitem">
+          <h3>Frio Constante</h3>
+          <p>A temperatura nas profundezas varia entre 2 °C e 4 °C, mantendo o metabolismo dos seres marinhos bem lento.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" aria-labelledby="titulo-galeria" class="fade-in">
+      <header>
+        <h2 id="titulo-galeria">Galeria</h2>
+        <p>Imagens relacionadas ao tema com pequenas legendas.</p>
+      </header>
+
+      <div class="gallery" role="list">
+        <!-- TODO: Adicionar de 3 a 6 imagens na galeria. Duplique/remova figuras conforme necessário. -->
+        <figure role="listitem">
+          <img src="https://www.iberdrola.com/documents/153844/1200366/Fauna_Abisal_746x419.jpeg/04c36a9e-c3c1-6965-2d07-d127bb1de04e?t=1639048934714" />
+          <figcaption>Iberdrola - Chironex fleckeri</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://lereaprender.com.br/wp-content/uploads/2020/10/peixes-abissais-e1603385608288.jpg" alt="Foto 2 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption>Diabo Negro do mar - Melanocetus johnsonii</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpHa46vGXh9F8qnxlFeAXoOsV8X0-X7dina441fOFqWuMYnn30lOrWyfHPaJvF_bh4OzU&usqp=CAU" alt="Foto 3 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption> Peixe-bolha - Psychrolutes marcidus</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://i0.wp.com/segredosdomundo.r7.com/wp-content/uploads/2021/03/animais-abissais-o-que-sao-caracteristicas-onde-e-como-vivem-18.jpg?resize=640%2C413&quality=89&ssl=1" alt="Foto 4 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption> Peixe-Coelho -  Chimaera monstrosa</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Tripod_fish1.jpg/250px-Tripod_fish1.jpg" alt="Foto 5 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption>Peixe-Tripé - Bathypterois longipes</figcaption>
+        </figure>
+        <figure role="listitem">
+          <img src="https://blogdopescador.com/wp-content/uploads/2023/07/peixe-vibora-1.jpg" alt="Foto 6 relacionada a [[TEMA_DO_PROJETO]]" />
+          <figcaption>Peixe-Vibora - Chauliodus sloani</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="titulo-faq" class="fade-in">
+      <header>
+        <h2 id="titulo-faq">Perguntas Frequentes</h2>
+        <p>Respostas rápidas sobre o projeto e o tema.</p>
+      </header>
+
+      <div class="faq">
+        <!-- TODO: Ajustar perguntas/respostas conforme o tema -->
+        <details>
+          <summary>Quais são as principais características dos ecossistemas abissais e como elas influenciam a vida marinha nesse ambiente?</summary>
+          <p>São profundidades superiores a 4.000 m, com ausência de luz, baixa temperatura, alta pressão e pouco oxigênio, exigindo adaptações extremas das espécies.</p>
+        </details>
+        <details>
+          <summary>Como as espécies que habitam as zonas abissais se adaptaram à falta de luz solar e à pressão extrema?</summary>
+          <p>Organismos são bioluminescentes, têm corpos flexíveis e metabolismos lentos para sobreviver à falta de energia e alta pressão.</p>
+        </details>
+        <details>
+          <summary>Que tipos de organismos conseguem sobreviver em temperaturas extremamente baixas nos fundos abissais e o que eles utilizam como fonte de energia?</summary>
+          <p>Organismos como peixes e crustáceos usam quimiossíntese (conversão de compostos químicos em energia) para sobreviver, adaptados a baixas temperaturas.</p>
+        </details>
+        <details>
+          <summary>Quais são os principais desafios que os organismos marinhos enfrentam na zona abissal, além da falta de luz, como a baixa concentração de oxigênio e os altos níveis de pressão?</summary>
+          <p>Além da falta de luz, enfrentam alta pressão e baixos níveis de oxigênio, com adaptações como respiração eficiente e corpos flexíveis.</p>
+        </details>
+        <details>
+          <summary>O que é a bioluminescência e como ela é utilizada pelas criaturas marinhas nos sistemas abissais?</summary>
+          <p>É a produção de luz por organismos para caçar, se defender ou se comunicar. Nos abissais, geralmente é usada para atrair presas.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="cta-final" aria-labelledby="titulo-cta" class="fade-in">
+      <header>
+        <h2 id="titulo-cta">Continue explorando</h2>
+        <p>Escolha um caminho para aprender ainda mais.</p>
+      </header>
+      <div class="cta" role="group" aria-label="Call to Action">
+        <a href="#fatos">Aprender mais</a>
+        <a href="#galeria">Ver imagens</a>
+        <a href="#creditos">Baixar material &amp; Fontes</a>
+      </div>
+    </section>
+
+    <!-- CRÉDITOS/FONTES -->
+    <section id="creditos" aria-labelledby="titulo-creditos" class="fade-in">
+      <header>
+        <h2 id="titulo-creditos">Créditos e Fontes</h2>
+        <p>Referências utilizadas neste projeto.</p>
+      </header>
+      <!-- TODO: Inserir links ou nomes das fontes -->
+      <article>
+        <p>[[FONTES_REFERENCIAS]]</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Painel do Chatbot (Aside fixo) -->
+  <aside id="chatPane" role="complementary" aria-label="Painel do chatbot" aria-hidden="true">
+    <div class="chat-header">
+      <strong>Chatbot Demonstrativo</strong>
+      <div>
+        <button id="closeChat" class="icon-btn" aria-label="Fechar chatbot">✖</button>
+      </div>
+    </div>
+    <div class="chat-body" id="chatHistory" aria-live="polite">
+      <!-- Placeholders de histórico -->
+      <div class="msg bot">Olá! Sou um protótipo de chatbot. Como posso ajudar sobre [[TEMA_DO_PROJETO]]?</div>
+      <div class="msg user">Quero saber curiosidades rápidas.</div>
+      <div class="msg bot">Veja a seção “Curiosidades” ou pergunte algo específico!</div>
+    </div>
+    <form class="chat-input" id="chatForm" aria-label="Entrada de mensagem do chatbot">
+      <input id="chatText" type="text" name="q" placeholder="Digite sua mensagem..." aria-label="Escreva sua mensagem" />
+      <button class="icon-btn" type="submit" aria-label="Enviar mensagem">➤</button>
+    </form>
+  </aside>
+
+  <footer class="wrap" role="contentinfo">
+    <p>&copy; <span id="ano"></span> | Projeto: [[TEMA_DO_PROJETO]] — <a href="#topo" id="backToTop">Voltar ao topo</a></p>
+  </footer>
+<script src="script.js"></script>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<df-messenger
+  intent="WELCOME"
+  chat-title="ECOBOT"
+  agent-id="6c106d6c-eef7-41db-92b4-5bf82848937e"
+  language-code="pt-br">
+</df-messenger>
+
+<!-- Modal da câmera -->
+<div id="cameraModal" class="modal" aria-hidden="true" style="display:none;">
+  <div class="modal-content">
+    <button id="fecharModal" class="botao-fechar" title="Fechar">❌</button>
+    <h2 class="modal-title">Reconhecimento Facial</h2>
+    <div class="video-wrap">
+      <video id="video" autoplay muted playsinline></video>
+    </div>
+    <div class="controls">
+      <button id="tirarFoto" class="botao-foto" title="Tirar foto">📸</button>
+    </div>
+    <p id="modalStatus" class="modal-status">Aguardando...</p>
+    <canvas id="fotoCanvas" style="display:none;"></canvas>
+  </div>
+</div>
+
+</body>
+</html>
+
